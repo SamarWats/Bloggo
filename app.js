@@ -14,7 +14,7 @@ const bcrypt=require('bcrypt');
 const cookieParser=require('cookie-parser');
 // const { register } = require('module');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.set("view engine", "ejs");
 
