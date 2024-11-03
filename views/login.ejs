@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Facebook Login page</title>
+    <!-- <link rel="stylesheet" href="SignIn_facebook.css">
+    <link rel="stylesheet" href="LogIn_facebook.html"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="stylesheets/Login_In_style.css">
+</head>
+<body class="bg-zinc-900">
+    <div class="container ">
+
+        <div class="section1 ">
+            <div class="title text-5xl">
+                <h1 class="heading">bloggo</h1>
+            </div>
+            <div class="about text-blue-500">
+                <h4 class="para">create your own blogs and edit them </h4>
+            </div>
+        </div>
+        
+        <div class="section-2 bg-zinc-800 text-white">
+                <h1>Login Account</h1>
+    
+                <div class="form_div">
+    
+                    <form action="/login" method="post">
+                        <input type="email" class="input-group" required  name="email" placeholder=" Enter a valid E-mail ID">
+                        <input type="password" class="input-group" name="password" required placeholder=" Create Password">
+                    
+                        <br>
+                        <br>
+                        <div class="terms">
+                            By clicking the Create Account, you agree to our <a href="#">Terms</a>,
+                            <a href="#">Data Policy</a> and <a href="#">Cookie Policy.</a> You
+                            may recieve SMS notification from us and can opt out at any time.
+                          </div>
+                          <!-- <br> -->
+                          <hr>
+                           
+                          <div class="login-btn">
+                              <a href="/login"><input type="submit" name="login" class="login-butn" value="LogIn"></a>
+                          </div>
+    
+                    </form>
+                </div>
+    
+            </div>
+            
+
+    </div>
+    
+</body>
+</html>

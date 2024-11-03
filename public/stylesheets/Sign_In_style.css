@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* padding: 60px;
+    margin: 0;
+    background-color: aliceblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 50px;
+    background-color: aliceblue;
+}
+
+/* Container */
+.container {
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid wheat;
+    box-shadow: 5px 4px 10px 2px rgb(212, 224, 245);
+    column-gap: 100px;
+    margin: auto;
+    /* row-gap: 100px; */
+
+    /* padding: 15px;
+    border: 1px solid wheat;
+    box-shadow: 5.5px 5px 8px 3px cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%; */
+}
+
+@media (min-width: 1024px) {
+    .container {
+        flex-direction: row;
+    }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section1, .section-2 {
+        width: 80%;
+        padding: 15px;
+    }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        box-shadow: none;
+        padding: 10px;
+    }
+
+    .section1, .section-2 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .section1 .title {
+        font-size: 1.5em;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .section-2 h1 {
+        font-size: 20px;
+    }
+}
+.section1, .section-2{
+    flex-basis: 50%;
+    padding: 20px;
+
+}
+
+.section1 .title{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: rgb(30, 102, 216);
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section1 .about{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+
+.section-2{
+    background-color: rgb(248, 252, 253);
+    border: 1px solid rgb(224, 224, 224);
+    box-shadow: 5px 5px 4px 0.5px rgb(206, 222, 245);
+    border-radius: 1px;
+    padding: 10px;
+    /* margin-left: 500px; */
+    /* height: screen; */
+    /* width: 50%; */
+}
+
+/* Heading */
+.section-2 h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(43, 98, 238);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* Input group */
+
+.section-2 input{
+    border: 1px solid black;
+    /* border: 0 solid gray; */
+    background-color:transparent;
+}
+
+.input-group {
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 17px;
+    margin: 5px;
+    width: 95%;
+    border: 1px solid black;
+    outline: none;
+    /* border: 0; */
+
+}
+
+/* Terms */
+.terms {
+    color: #2280df;
+    font-size: 16px;
+    margin: 5px 0;
+    /* text-shadow: 2px 1.8px 3.2px rgb(95, 199, 237); */
+}
+
+.terms a {
+    text-decoration: none;
+    color: #385898;
+    cursor: pointer;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Submit button */
+.section-2 input[type='submit'] {
+    min-width: 130px;
+    padding: 8px 20px;
+    font-size: 18px;
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    background-image: linear-gradient(#67ae55, #578843);
+    border: 1px solid;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.section-2 input[type='submit']:hover {
+    /* width: 132px; */
+    background-image: linear-gradient(#63af50, #558c40);
+}
+
+/* Button */
+.btn a {
+    text-decoration: none;
+    color: white;
+} 
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px; /* Optional: add space above the button */
+    /* width: 100%; */
+}
+
+.login-btn input[type='submit'] {
+    font-size: 18px; /* Increased font size by 50% */
+    /* padding: 12px 22.5px; Increased padding by 50% */
+    background-color: #0e8ede;
+    box-shadow: inset 0 1px 1px #0b75cb;
+    background-image: linear-gradient(#36a4f8, #1a7aba);
+    border: 1px solid;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}

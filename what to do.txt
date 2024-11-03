@@ -1,0 +1,7 @@
+user post likh payenge
+1. user create krenge (server side rendering)
+2. login and register
+3. logout
+4. post creation
+5.post like
+6.post delete(only to post owner)
