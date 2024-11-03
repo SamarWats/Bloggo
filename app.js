@@ -5,9 +5,6 @@ const userModel = require('./models/user');
 const postModel = require('./models/post');
 const user = require('./models/user');
 
-const dbURI = process.env.MONGO_URI;
-
-
 
 
 const crypto = require('crypto');
@@ -27,8 +24,6 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cookieParser());
-
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.get("/", function(req, res){
     res.render("index")
