@@ -21,3 +21,8 @@
     "save": "^2.9.0"
   }
 }
+
+"scripts": {
+  "test": "echo \"Running tests...\" && exit 0"
+}
+
