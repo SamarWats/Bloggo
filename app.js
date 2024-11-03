@@ -1,4 +1,3 @@
-require('dotenv').config();
 const express = require('express');
 const app = express();
 const path=require('path');
@@ -30,8 +29,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cookieParser());
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Database connected successfully'))
-  .catch(err => console.log('Database connection error:', err));
 
 app.get("/", function(req, res){
     res.render("index")
