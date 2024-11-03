@@ -5,6 +5,10 @@ const userModel = require('./models/user');
 const postModel = require('./models/post');
 const user = require('./models/user');
 
+const dbURI = process.env.MONGO_URI;
+
+
+
 
 const crypto = require('crypto');
 const upload = require("./config/multerConfigure")
@@ -24,6 +28,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cookieParser());
 
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Database connected successfully'))
+  .catch(err => console.log('Database connection error:', err));
 
 app.get("/", function(req, res){
     res.render("index")
