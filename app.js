@@ -5,7 +5,7 @@ const userModel = require('./models/user');
 const postModel = require('./models/post');
 const user = require('./models/user');
 
-
+const dotenv = require('dotenv');
 
 const crypto = require('crypto');
 const upload = require("./config/multerConfigure");
@@ -14,8 +14,10 @@ const jwt= require('jsonwebtoken');
 const bcrypt=require('bcrypt');
 const cookieParser=require('cookie-parser');
 // const { register } = require('module');
+dotenv.config();
 
 const PORT = process.env.PORT || 4000;
+const JWT_SECRET = process.env.JWT_SECRET;
 
 app.set("view engine", "ejs");
 
@@ -131,7 +133,7 @@ app.post('/register',async function(req, res){
             });
 
             // now setup the token they will be sent when login to both the database and the user
-            let token = jwt.sign({email:email, userid:user._id}, 'myHotKeys');
+            let token = jwt.sign({email:email, userid:user._id}, JWT_SECRET);
             res.cookie("token", token);
 
             // when the user is created redirect it to the profile page
@@ -153,7 +155,7 @@ app.post('/login', async function(req, res){
     bcrypt.compare(password, user.password, function(err, result){
         // if password matches with the actual password that user created at the time of registration then redirect it to profile page
         if(result){
-            let token = jwt.sign({email:email, userid:user._id}, 'myHotKeys');
+            let token = jwt.sign({email:email, userid:user._id}, JWT_SECRET);
             res.cookie("token", token);
 
             res.status(200).redirect("/profile");
@@ -182,7 +184,7 @@ function isLoggedIn(req, res, next){
     if(req.cookies.token === "") res.redirect("/login");
 
     else{
-        let data = jwt.verify(req.cookies.token, 'myHotKeys');
+        let data = jwt.verify(req.cookies.token, JWT_SECRET);
         req.user=data;
         next();
     }
