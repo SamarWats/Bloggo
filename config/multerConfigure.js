@@ -1,11 +1,11 @@
 const multer= require('multer');
-const path = require("path")
+const path = require('path')
 const crypto = require('crypto');
 
 const storage = multer.diskStorage({
     // here we are setting up the file folder 
     destination: function (req, file, cb) {
-        cb(null, "./public/images/uploads")
+        cb(null, './public/images/uploads')
     },
     filename: function (req, file, cb) {
         // here we are setting up the files name 

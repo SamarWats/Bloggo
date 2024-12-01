@@ -8,7 +8,7 @@ const user = require('./models/user');
 
 
 const crypto = require('crypto');
-const upload = require("./config/multerConfigure")
+const upload = require("./config/multerConfigure");
 
 const jwt= require('jsonwebtoken');
 const bcrypt=require('bcrypt');
@@ -157,6 +157,7 @@ app.post('/login', async function(req, res){
             res.cookie("token", token);
 
             res.status(200).redirect("/profile");
+            
         }
 
         // if user is not present redirect it to registeration page

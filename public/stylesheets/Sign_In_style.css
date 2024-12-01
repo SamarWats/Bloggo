@@ -22,8 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid wheat;
-    box-shadow: 5px 4px 10px 2px rgb(212, 224, 245);
+    /* border: 1px solid wheat; */
+    /* box-shadow: 5px 4px 10px 2px rgb(212, 224, 245); */
     column-gap: 100px;
     margin: auto;
     /* row-gap: 100px; */
@@ -99,6 +99,8 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid white;
+    border-radius: 25px 0 25px 0 ; */
 
 }
 
@@ -109,11 +111,12 @@ body {
 }
 
 .section-2{
-    background-color: rgb(248, 252, 253);
+    background-color: rgba(28, 27, 27, 0.456);
     border: 1px solid rgb(224, 224, 224);
-    box-shadow: 5px 5px 4px 0.5px rgb(206, 222, 245);
-    border-radius: 1px;
-    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 3px 0.25px rgb(206, 222, 245);
+    /* border-radius: 1px; */
+    padding: 15px;
     /* margin-left: 500px; */
     /* height: screen; */
     /* width: 50%; */
